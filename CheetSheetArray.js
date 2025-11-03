@@ -118,3 +118,53 @@ console.log(mappedArray); // [2, 4, 6]
 let mixedNumbers = [10, 15, 20, 25, 30];
 let filteredNumbers = mixedNumbers.filter((num) => num > 20);
 console.log(filteredNumbers); // [25, 30]
+
+// 15. find()
+// Definition: Returns the value of the first element in the array that satisfies the provided testing function.
+// Syntax: array.find(callback(element, index, array), thisArg);
+// Example:
+let inventory = [
+  { name: "apple", quantity: 5 },
+  { name: "banana", quantity: 0 },
+  { name: "cherry", quantity: 10 },
+];
+let foundItem = inventory.find((item) => item.quantity > 0);
+console.log(foundItem); // { name: 'apple', quantity: 5 }
+
+// 16. findIndex()
+// Definition: Returns the index of the first element in the array that satisfies the provided testing function.
+// Syntax: array.findIndex(callback(element, index, array), thisArg);
+// Example:
+let scores = [10, 20, 30, 40];
+let index = scores.findIndex((score) => score > 25);
+console.log(index); // 2
+
+// 17. every()
+// Definition: Tests whether all elements in the array pass the test implemented by the provided function.
+// Syntax: array.every(callback(element, index, array), thisArg);
+// Example:
+let allAboveTen = [12, 15, 20].every((num) => num > 10);
+console.log(allAboveTen); // true
+
+// 18. some()
+// Definition: Tests whether at least one element in the array passes the test implemented by the provided function.
+// Syntax: array.some(callback(element, index, array), thisArg);
+// Example:
+let hasNegative = [1, -2, 3].some((num) => num < 0);
+console.log(hasNegative); // true
+
+// 19. reduce()
+// Definition: Executes a reducer function on each element of the array, resulting in a single output value.
+// Syntax: array.reduce(callback(accumulator, currentValue, index, array), initialValue);
+// Example:
+let valuesToReduce = [1, 2, 3, 4];
+let reducedValue = valuesToReduce.reduce((acc, val) => acc + val, 0);
+console.log(reducedValue); // 10
+
+// 20. includes()
+// Definition: Determines whether an array includes a certain value among its entries, returning true or false as appropriate.
+// Syntax: array.includes(searchElement, fromIndex);
+// Example:
+let numbersToCheck = [1, 2, 3, 4, 5];
+let includesThree = numbersToCheck.includes(3);
+console.log(includesThree); // true
